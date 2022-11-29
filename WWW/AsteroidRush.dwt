@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    	<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+   
+   <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700' rel='stylesheet' type='text/css'>
+   
+   <link href='http://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
+   
+   <link href='http://fonts.googleapis.com/css?family=Ubuntu:400,300italic,300,400italic,500,500italic,700,700italic' rel='stylesheet' type='text/css'>
+    	<link rel="stylesheet" href="../assets/cca.css">
+    <script type="text/javascript" src="../lib/phaser.min.js"></script>
+    <script type="text/javascript" src="../js/flappy.js"></script>
+		<style>
+			body {
+				background-image:url(../assets/Starfield.png)}
+			.container {padding:30px;
+				border:#F00 solid 0px;
+				width:900px;
+				background:#FFF;
+				vertical-align:bottom;
+				}
+	.container2 {padding:15px;}			
+	p {font-family: 'Open Sans Condensed', sans-serif;
+	   font-size:16px;}		
+	   /*this is the button tag that makes the bottons at the top what they are now */
+	 .button {background-color:#93C;
+ 		  border:#FF0 solid 1px;
+		  color:#000;
+		  margin:10px;
+		  padding:15px;
+		  width:150px;
+		  border-radius: 10px;
+		  text-align:center;
+		  display:inline-block; }
+		  /* When you are on a web-site the greyed out button will indicate which web-site you are on*/
+	.used_button {background-color:#ebebeb;
+ 		  border:#FF0 solid 1px;
+		  color:#fff;
+		  margin:10px;
+		  padding:15px;
+		  width:150px;
+		  border-radius: 10px;
+		  text-align:center;
+		  display:inline-block; } 		   	
+	td {font-family: 'Open Sans Condensed', sans-serif;}
+	 .title_for_table {background-color:#ebebeb;
+ 				   color:#F00;
+				   font-family: 'Oswald', sans-serif;
+				   
+				   }
+ .subtitle_for_table {background-color:#09F;
+                      color:#CCC;
+					  font-family: 'Ubuntu', sans-serif;
+					  }
+.grey {background-color:#ebebeb;}	
+ td {border-left:0px;
+     border-right:0px;		}
+.price {font-weight:bold;}	
+table {
+	background:#999;}  						
+		</style>
+    </head>
+    <body>
+    	<div align="center" style="vertical-align:bottom;">
+	 	<div align="center" style="vertical-align:bottom;">
+    	<table class="container" >
+        	<thead>
+            	<tr align="center"><td align="left"><img src="../assets/ship.png" alt="space ship" width="147" height="71";></td>
+            	  <td colspan="2"><h1 class="button">Space Flight</h1></td><td align="right"><img src="../assets/ship.png" alt="space ship" width="147" height="74";></td></tr>
+            </thead>
+            <tr><td colspan="4"> <div id="game"> </div></td></tr>
+            <tr><td colspan="4" align="center"><h3>Play the game here!</h3></td></tr>
+            <tr><td colspan="4" class="button"><a align="center" href="../pages/example.html" target="_blank">Space Flight Initiated</a></td></tr>
+        </table>
+        </div>
+        </div>
+    </body>
+</html>

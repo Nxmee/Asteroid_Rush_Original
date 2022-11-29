@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Asteroid Rush</title>
+    	<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+   
+   <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700' rel='stylesheet' type='text/css'>
+   
+   <link href='http://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
+   
+   <link href='http://fonts.googleapis.com/css?family=Ubuntu:400,300italic,300,400italic,500,500italic,700,700italic' rel='stylesheet' type='text/css'>
+    	<link rel="stylesheet" href="../assets/cca.css">
+		<link rel="stylesheet" href="../assets/style.css"/>
+        <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:700' rel='stylesheet' type='text/css'>
+		<style>
+			.Bordercontrol{
+				border-top-width: 0px;
+			}
+			.ScoreBoardHead{
+				horiz-align: left;
+				vert-align: middle;
+				text-align: left;
+				background-color:#FFFFFF;
+				width: 790px;
+			}
+			.ScoreBoardHead Div{
+				font-size: 20px;
+				text-align: center;
+			}
+			.ScoreBoardBody{
+				horiz-align: left;
+				vert-align: middle;
+				text-align: left;
+				background-color:#FFFFFF;
+				width: 790px;
+			}
+			.ScoreBoardBody ol {
+				text-align: left;
+			}
+			body {
+				background-image:url(../assets/Websites/Starfield%20background%20for%20Webpage%202.png)}
+			.container {padding:30px;
+				border:#F00 solid 0px;
+				width:1200px;
+				background:#333333;
+				vertical-align:bottom;
+				}
+	.container2 {padding:15px;}			
+	p {/*font-family: 'Open Sans Condensed', sans-serif;*/
+	   font-size:16px;}		
+	   /*this is the button tag that makes the bottons at the top what they are now */
+	 .button {background-color:#FFFFFF;
+ 		  border:#FF0 solid 1px;
+		  color:#000;
+		  margin:10px;
+		  padding:15px;
+		  width:300px;
+		  border-radius: 10px;
+		  text-align:center;
+		  display:inline-block; }
+		  /* When you are on a web-site the greyed out button will indicate which web-site you are on*/
+	.used_button {background-color:#ebebeb;
+ 		  border:#FF0 solid 1px;
+		  color:#fff;
+		  margin:10px;
+		  padding:15px;
+		  width:150px;
+		  border-radius: 10px;
+		  text-align:center;
+		  display:inline-block; } 		   	
+	 .title_for_table {background-color:#ebebeb;
+ 				   color:#F00;
+				   font-family: 'Oswald', sans-serif;
+				   
+				   }
+ .subtitle_for_table {background-color:#09F;
+                      color:#CCC;
+					  font-family: 'Ubuntu', sans-serif;
+					  }
+.grey {background-color:#ebebeb;}	
+ td {border-left:0px;
+     border-right:0px;		}
+.price {font-weight:bold;}	
+table {
+	background:#999;}
+	td {font-family: 'Roboto Slab', serif;
+	padding:0px;
+	margin:0px;}
+			h2 {
+				background-color:#FFFFFF;
+				color: #000;
+				align:"center";
+				border: 10px;
+				border-style: solid;
+   				border-color: #333333 #333333; }
+				form .stars {
+  background: url("../assets/sprites/Starfield.png") repeat-x 0 0;
+  width: 150px;
+  margin: 0 auto;
+}
+.ScoreTable{
+	line-height: 5px;
+}
+#info {}
+.form{
+	background:#FFF;}
+		</style>
+          <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    </head>
+    <body>
+        <div align="center" style="vertical-align:bottom;">
+	 	<div align="center" style="vertical-align:bottom;">
+
+			<div class="container" >
+            
+				<table width="1200px">
+				<thead>
+            	<tr align="center"><td width="147" height="130" align="left" colspan="2"><img src="../assets/sprites/ship/ship.png" alt="space ship" width="147" height="71";></td>
+            	  <td align="center" valign="middle" width="572" ><img src="../assets/sprites/menu/logo.png" alt="space ship" width="450" height="150";></td><td align="right" width="147" colspan="2"><img src="../assets/sprites/ship/ship.png" alt="space ship" width="147" height="74";></td></tr>
+            </thead>
+            <tr><td colspan="3">
+            <table border="10" bordercolor="#333333" width="770" height="400">
+            <tr><td>
+            <div id="game"></div>
+            </td></tr>
+            </table></td><td width="300px" ><div border="10" bordercolor="#333333">
+							<h2 border="10" bordercolor="#333333"> Here are the people that have made it onto the leaderboards!</h2>
+							<table border="10" bordercolor="#333333">
+								<tr border="1" bordercolorlight="#CCCCCC" ><td class="ScoreBoardHead" id="EasyHead"><div>Easy Mode
+								</div></tr></table>
+							<table border="10" bordercolor="#333333 " id="EasyBody" class="Bordercontrol" >
+								<tr border="1" bordercolorlight="#CCCCCC"><div ><td class="ScoreBoardBody"><ol id="EasyScoreBoardName">
+								</ol></td><td class="ScoreBoardBody"><ol id="EasyScoreBoardScore"></ol></td></div></tr></table>
+						<br />
+						<table border="10" bordercolor="#333333">
+							<tr border="1" bordercolorlight="#CCCCCC"><td class="ScoreBoardHead" id="MedHead"><div>Medium Mode
+							</div></tr></table>
+						<table border="10" bordercolor="#333333" id="MedBody" class="Bordercontrol">
+							<tr border="1" bordercolorlight="#CCCCCC"><div ><td class="ScoreBoardBody"><ol id="MedScoreBoardName">
+							</ol></td><td class="ScoreBoardBody"><ol id="MedScoreBoardScore"></ol></td></div></tr></table>
+						<br />
+						<table border="10" bordercolor="#333333">
+							<tr border="1" bordercolorlight="#CCCCCC"><td class="ScoreBoardHead" id="HardHead"><div>Hard Mode
+							</div></tr></table>
+						<table border="10" bordercolor="#333333" id="HardBody" class="Bordercontrol">
+							<tr border="1" bordercolorlight="#CCCCCC"><div ><td class="ScoreBoardBody"><ol id="HardScoreBoardName">
+							</ol></td><td class="ScoreBoardBody"><ol id="HardScoreBoardScore"></ol></td></div></tr></table>
+						<br />
+						<table border="10" bordercolor="#333333">
+							<tr border="1" bordercolorlight="#CCCCCC"><td class="ScoreBoardHead" id="UltraHead"><div>Ultra Mode
+							</div></tr></table>
+						<table border="10" bordercolor="#333333" id="UltraBody" class="Bordercontrol">
+							<tr border="1" bordercolorlight="#CCCCCC"><div ><td class="ScoreBoardBody"><ol id="UltraScoreBoardName">
+							</ol></td><td class="ScoreBoardBody"><ol id="UltraScoreBoardScore"></ol></td></div></tr></table>
+						</div>
+            <tr><td align="center" colspan="4">
+            <div id="greeting">
+            <table border="10" bordercolor="#333333">
+            <thead>
+            </thead>
+            <tr><td>
+
+			<form id="greeting-form" class="form" colspan="4" align="center" method="post" action="/score" action="Thank you for leaing us a review!.html" method="post">
+				<div class="form-group">
+
+					<label for="fullName">Name:</label>
+					<input type="text" id="fullName" name="fullName"
+    			   class="form-control" placeholder="Bob" required>
+                           
+					<br />
+					<label for="email">email:</label>
+					<input type="email" id="email" class="form-control"
+						   name="email" placeholder="bob@email.com" required>
+					<input type="hidden" id="score" name="score" value="0">
+					<input type="hidden" id="difficulty" name="difficulty" value="Easy">
+				</div>
+				<button class="formbutton" id="Enter" ty
+						pe="submit">OK</button>
+			</form>
+		
+
+        </td></tr>
+        </table>
+        </div>
+            </td><td></td></tr>
+					<tr><td align="center" colspan="4">
+											</td></tr>
+					<tr><td colspan="4" align="center" valign="middle">
+						<div id="info">
+							<table border="10" bordercolor="#333333" bordercolorlight="#CCCCCC" style="background-color:#FFFFFF ">
+								<tr><td></td><td align="center">Press Enter to Start</td></tr>
+								<tr border="10" bordercolor="#006666" ><td></td><td align="center">Rules of the Game:</td></tr>
+								<tr><td></td><td align="center">Press Up and Down to move your space craft</td></tr>
+								<tr><td></td><td align="center">Press the SpaceBar to fire an asteroid destroying laser!</td></tr>
+								<tr align="center"><td align="left" colspan="2">
+									<li><ul>Hit an asteroid with a laser (+1 Point)</ul></li>
+								</td></tr>
+								<tr align="center"><td></td><td align="left" colspan="2">
+									<li><ul>Fly through a pipe (+1 point)</ul></li>
+								</td></tr>
+								<tr align="center"><td></td><td align="left" colspan="2">
+									<li><ul>Hit a pipe with a laser (-1 point)</ul></li>
+								</td></tr>
+								<tr align="center"><td></td><td align="left" colspan="2">
+									<li><ul>Hit a pipe: Game Over.</ul></li>                            	</td></tr>
+								</td></tr>
+								<tr><td></td><td align="center">Game created by Anton Zhitomirsky & Chris Hart.</td></tr>
+								<tr><td></td><td align="center">Version B.1</td></tr>
+
+
+							</table>
+						</div>
+					</td></tr>
+<tr><td></td></tr>
+
+           </table>
+        </div>
+        </div>
+			</div>
+		<script>
+			/*$( "#greeting" ).offset({ top: 110, left: 520 });*/
+			$("#greeting").hide();
+			$("#info").hide();
+			$("#EasyBody").hide();
+			$("#MedBody").hide();
+			$("#HardBody").hide();
+			$("#UltraBody").hide();
+			$( "#EasyHead" ).click(function() {
+				$("#EasyBody").fadeIn();
+				$("#MedBody").fadeOut();
+				$("#HardBody").fadeOut();
+				$("#UltraBody").fadeOut();;
+			});
+			$( "#MedHead" ).click(function() {
+				$("#MedBody").fadeIn();
+				$("#EasyBody").fadeOut();
+				$("#HardBody").fadeOut();
+				$("#UltraBody").fadeOut();
+			});
+			$( "#HardHead" ).click(function() {
+				$("#HardBody").fadeIn();
+				$("#EasyBody").fadeOut();
+				$("#MedBody").fadeOut();
+				$("#UltraBody").fadeOut();
+			});
+			$( "#UltraHead" ).click(function() {
+				$("#UltraBody").fadeIn();
+				$("#EasyBody").fadeOut();
+				$("#MedBody").fadeOut();
+				$("#HardBody").fadeOut();
+			});
+		</script>
+		<script src="../lib/jquery.js"></script>
+		<script src="../lib/phaser.min.js"></script>
+		<script src="../js/AsteroidRush.js"></script>
+    </body>
+</html>
